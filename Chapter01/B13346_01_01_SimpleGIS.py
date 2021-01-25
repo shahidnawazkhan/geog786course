@@ -113,3 +113,7 @@ t.write("The western-most city is: " + western_city[NAME])
 # Hide our map pen
 t.pen(shown=False)
 t.done()
+
+#this file is being modified for the version of My Computer on SNK
+
+#git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\code.exe' -w"
