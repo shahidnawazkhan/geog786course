@@ -116,4 +116,4 @@ t.done()
 
 #this file is being modified for the version of My Computer on SNK
 
-#git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\code.exe' -w"
+#git config --global core.editor "'C:\Program Files\Microsoft VS Code\Code.exe' -w"
