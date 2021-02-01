@@ -1,3 +1,14 @@
+# SCRIPT FOR GENERATING FINE-SCALE WUI BASED ON HOUSING POINT DATA AND WILDLAND VEGETATION RASTER
+# The script generates multiple WUI layers, one per buffer distance from 100m to 1000m.
+# Methodological details appear in: Bar-Massada et al. 2013. Using structure locations as a basis for mapping the wildland urban interface. Journal of Environmental Management 128:540-547
+# The script requires the following layers:
+# [1] A point shapefile with housing locations; be sure that there is a field called "value1" where all points have 1 assigned to this column
+# [2] A raster of wildland vegetation, '1' for flamable , '0' otherwise
+# [3] A raster of distance to large, contiguous patches of wildland vegetation (see article for details). '1' for cells within 2400m of vegetation patches that are larger than 5km^2, '0' otherwise.
+# [4] A raster of water and other surfaces where houses can never be built, with '0' for unbuildable and '1' for areas where housed can be built
+# At present, the [3] raster is generated manually, by converting [2] to a polygon shapefile, calculating polygon areas, buffering those larger than 5km2 to 2400m, and converting back to raster
+# after assignig buffered areas the value '1'. NoData cells in the resulting raster are converted to '0'.
+
 #IMPORT SYSTEM MODULES
 import os
 import sys, string
